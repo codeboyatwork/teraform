@@ -11,6 +11,10 @@ node('master') {
 	      // build project via maven
 	      sh "'${mvnHome}/terraform' init"
 	    }
+	stage('Timepass1') {
+	      // build project via maven
+	      sh "'${mvnHome}/terraform' apply -auto-approve"
+	    } 
 	   
 	stage('Timepass2') {
 	      // build project via maven
